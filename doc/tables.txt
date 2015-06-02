@@ -1,0 +1,37 @@
+TABELAS
+
+CLIENTES
+nome
+usuario
+senha
+endereco
+cnpj/cpf
+data de cadastro
+telefone
+email
+
+PRODUTOS
+codigo do produto
+tipo
+  Stouts
+  Lagers
+  Weiss
+  Pale Ale
+  American Ale
+descrição
+preço
+
+PEDIDOS
+numero pedido
+codigo cliente
+endereço de entrega
+forma de pagamento
+desconto
+valor final
+
+ITENS PEDIDO
+numero pedido
+codigo do produto
+quantidade
+
+
