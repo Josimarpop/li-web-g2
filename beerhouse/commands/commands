@@ -1,0 +1,9 @@
+rails new beerhouse
+
+rails generate model User login:string name:string address:string update_date:string phone_number:string email:string encrypted_password:string salt:string
+
+rails generate model Product descricao:string unit_price:number avaliable_items:number
+
+rails generate model Order order_number:number cpf_cnpj:string delivery_address:string payment_type:string value:number
+
+rails generate model Item quantity:number
