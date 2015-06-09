@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  descricao: MyString
-  unit_price: 
-  avaliable_items: 
+  description: MyString
+  unit_price: 1.5
+  avaliable_items: 1
 
 two:
-  descricao: MyString
-  unit_price: 
-  avaliable_items: 
+  description: MyString
+  unit_price: 1.5
+  avaliable_items: 1

@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order_number: 
+  order_number: 1
   cpf_cnpj: MyString
   delivery_address: MyString
   payment_type: MyString
-  value: 
+  value: 1.5
 
 two:
-  order_number: 
+  order_number: 1
   cpf_cnpj: MyString
   delivery_address: MyString
   payment_type: MyString
-  value: 
+  value: 1.5
