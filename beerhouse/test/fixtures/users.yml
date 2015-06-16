@@ -7,8 +7,7 @@ one:
   update_date: MyString
   phone_number: MyString
   email: MyString
-  encrypted_password: MyString
-  salt: MyString
+  password: MyString
 
 two:
   login: MyString
@@ -17,5 +16,4 @@ two:
   update_date: MyString
   phone_number: MyString
   email: MyString
-  encrypted_password: MyString
-  salt: MyString
+  password: MyString
