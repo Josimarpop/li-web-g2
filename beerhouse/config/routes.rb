@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :products
   resources :orders
   resources :orders
   resources :users
@@ -59,5 +58,6 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     #   end
+  #     resources :products
+  #   end
 end
