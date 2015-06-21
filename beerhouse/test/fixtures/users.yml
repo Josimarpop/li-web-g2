@@ -4,7 +4,6 @@ one:
   login: MyString
   name: MyString
   address: MyString
-  update_date: MyString
   phone_number: MyString
   email: MyString
   password: MyString
@@ -13,7 +12,6 @@ two:
   login: MyString
   name: MyString
   address: MyString
-  update_date: MyString
   phone_number: MyString
   email: MyString
   password: MyString

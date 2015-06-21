@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  resources :users
   resources :products
   resources :orders
   resources :orders
-  resources :users
   get 'login/new'
 
   get 'users/new'
