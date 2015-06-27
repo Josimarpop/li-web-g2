@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   resources :items
   get 'sessions/new'
 
@@ -63,6 +64,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     #   end
   Rails.application.routes.draw do 
+  resources :orders
   resources :items
     resources :users 
     get 'sign_in' => 'sessions#new' 

@@ -6,6 +6,8 @@ class CreateOrders < ActiveRecord::Migration
       t.string :delivery_address
       t.string :payment_type
       t.float :value
+      t.integer :quantity
+      t.integer :product_id
 
       t.timestamps null: false
     end
