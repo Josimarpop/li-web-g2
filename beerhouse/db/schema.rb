@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20150627194412) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "login"
     t.string   "name"
     t.string   "address"
     t.string   "phone_number"
@@ -43,6 +42,7 @@ ActiveRecord::Schema.define(version: 20150627194412) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
+    t.boolean  "admin"
   end
 
 end
