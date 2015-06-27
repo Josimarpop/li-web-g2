@@ -32,7 +32,8 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @order.product_id %>
+  <!-- <%= @order.product_id %> -->
+  <!-- <%= Product.find_by(id: @order.product_id) %> -->
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |

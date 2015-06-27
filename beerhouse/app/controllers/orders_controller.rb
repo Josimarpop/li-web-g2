@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @products = Product.all.collect{ |p| [p.desc, p.id] }
   end
 
   # GET /orders/1/edit
