@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       @user = User.find_by(email: params[:session][:email].downcase) 
       if @user && @user.authenticate(params[:session][:password]) 
       	sign_in
-        redirect_to :orders
+        redirect_to :users
       else
       	render 'sessions/new'
       end
