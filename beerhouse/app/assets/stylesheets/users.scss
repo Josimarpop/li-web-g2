@@ -4,12 +4,12 @@
 
 body
 {
-//	background-image: url("beer_mug.jpg");
-	background-image: url("Beer-Bottles-.jpeg");
+	background-image: url("beer_mug.jpg");
+//	background-image: url("Beer-Bottles-.jpeg");
 }
 h1
 {
-	font-color: gray;
+	font-color: pink;
 	font-weight: bold;
 }
 .row
@@ -17,9 +17,11 @@ h1
 	border-radius: 10px;
 	background-color: rgb(200,200,200);
 	font-weight: bold;
+	opacity:0.86;
 }
-.col-xs-11
+.col-xs-10
 {
 	border-radius: 10px;
 	background-color: rgb(170,150,50);
+	opacity:0.86;
 }
