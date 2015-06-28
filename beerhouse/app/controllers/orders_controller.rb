@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+
   # GET /orders
   # GET /orders.json
   def index
@@ -15,7 +16,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
-    @products = Product.all.collect{ |p| [p.desc, p.id] }
+    @products = Product.all.collect{ |p| [p.desc, p.id] } 
   end
 
   # GET /orders/1/edit
@@ -61,6 +62,7 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

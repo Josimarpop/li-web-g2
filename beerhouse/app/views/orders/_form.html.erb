@@ -11,10 +11,12 @@
     </div>
   <% end %>
 
+<!-- 
   <div class="field">
     <%= f.label :order_number %><br>
     <%= f.number_field :order_number %>
   </div>
+-->
   <div class="field">
     <%= f.label :cpf_cnpj %><br>
     <%= f.text_field :cpf_cnpj %>
@@ -26,7 +28,7 @@
   <div class="field">
     <%= f.label :payment_type %><br>
     <!-- <%= f.text_field :payment_type %> -->
-    <%= f.select :payment_type, [["Boleto", 2], ["Paypal", 1], ["Débito", 0]] %>
+    <%= f.select :payment_type, [["Boleto", 2], ["Paypal", 1], ["Débito", 0]], :include_blank => 'Please select' %>
   </div>
   <div class="field">
     <%= f.label :value %><br>
@@ -41,7 +43,8 @@
     <!-- <%= f.number_field :product_id %> -->
     <p>
       <label for="Product">Product</label><br/>
-      <%= select(Product.all, :product_id, @products) %>
+      <%= f.select(:product_id, options_for_select(Product.all.collect{ |f| [f.desc, f.id]}), :include_blank => 'Please select') %>
+
     </p>
 
   </div>

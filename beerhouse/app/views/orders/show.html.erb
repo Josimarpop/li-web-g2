@@ -2,7 +2,7 @@
 
 <p>
   <strong>Order number:</strong>
-  <%= @order.order_number %>
+  <%= @order.id %>
 </p>
 
 <p>
@@ -17,7 +17,7 @@
 
 <p>
   <strong>Payment type:</strong>
-  <%= @order.payment_type %>
+  <%= show_payment_type(@order.payment_type) %>
 </p>
 
 <p>
@@ -32,8 +32,7 @@
 
 <p>
   <strong>Product:</strong>
-  <!-- <%= @order.product_id %> -->
-  <!-- <%= Product.find_by(id: @order.product_id) %> -->
+  <%= return_product_desc(@order.product_id) %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
