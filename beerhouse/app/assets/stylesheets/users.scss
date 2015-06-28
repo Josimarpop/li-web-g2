@@ -1,3 +1,23 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body
+{
+//	background-image: url("beer_mug.jpg");
+	background-image: url("Beer-Bottles-.jpeg");
+}
+h1
+{
+	font-color: green;
+	font-weight: bold;
+}
+.row
+{
+	background-color: rgb(200,200,200);
+	font-weight: bold;
+}
+.col-xs-8
+{
+	background-color: rgb(170,150,50);
+}
