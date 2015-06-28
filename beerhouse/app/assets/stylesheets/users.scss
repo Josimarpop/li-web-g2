@@ -9,15 +9,17 @@ body
 }
 h1
 {
-	font-color: green;
+	font-color: gray;
 	font-weight: bold;
 }
 .row
 {
+	border-radius: 10px;
 	background-color: rgb(200,200,200);
 	font-weight: bold;
 }
-.col-xs-8
+.col-xs-11
 {
+	border-radius: 10px;
 	background-color: rgb(170,150,50);
 }
