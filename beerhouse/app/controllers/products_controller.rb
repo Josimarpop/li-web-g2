@@ -4,7 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if logged_in?
+      if @current_user.admin
+        @products = Product.all
+      else 
+        redirect_to :orders
+      end
+    else
+      render 'sessions/new'
+    end
   end
 
   # GET /products/1
@@ -14,7 +22,15 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    if logged_in?
+      if @current_user.admin
+        @product = Product.new
+      else
+        redirect_to :orders
+      end
+    else
+      render 'sessions/new'
+    end
   end
 
   # GET /products/1/edit
@@ -64,7 +80,15 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      if logged_in?
+        if @current_user.admin
+          @product = Product.find(params[:id])
+        else
+          redirect_to :orders
+        end
+      else
+        render 'sessions/new'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
