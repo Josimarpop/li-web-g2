@@ -7,6 +7,9 @@
           <li> <%= link_to "Log out", sign_out_path, method: "delete" %> </li>
           <li> <%= link_to "Users", :users %> </li>
           <li> <%= link_to "Orders", :orders %> </li>
+          <% if @current_user.admin %>
+            <li> <%= link_to "Products", :products %> </li>
+          <% end %>
         <% else %>
           <li><%= link_to "Log in", root_path %></li>
         <% end %>
