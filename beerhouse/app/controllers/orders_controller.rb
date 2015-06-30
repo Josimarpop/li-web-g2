@@ -5,7 +5,11 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    if logged_in?
+      @orders = Order.all
+    else
+      render 'sessions/new' 
+    end
   end
 
   # GET /orders/1
@@ -15,8 +19,12 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-    @order = Order.new
-    @products = Product.all.collect{ |p| [p.desc, p.id] } 
+    if logged_in?
+      @order = Order.new
+      @products = Product.all.collect{ |p| [p.desc, p.id] } 
+    else
+      render 'sessions/new'
+    end
   end
 
   # GET /orders/1/edit
@@ -67,7 +75,11 @@ class OrdersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
-      @order = Order.find(params[:id])
+      if logged_in?
+        @order = Order.find(params[:id])
+      else
+        render 'sessions/new'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
